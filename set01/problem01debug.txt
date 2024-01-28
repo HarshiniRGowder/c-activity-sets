@@ -1,7 +1,10 @@
-Breakpoint 2 at 0x40146e: file problem03.c, line 5.
-(gdb) b 7
-Note: breakpoint 2 also set at pc 0x40146e.
-Breakpoint 3 at 0x40146e: file problem03.c, line 7.
-(gdb) b 9
-Breakpoint 4 at 0x401480: file problem03.c, line 9.
-(gdb) quit 
+Breakpoint 1, main () at problem01.c:5
+5           printf("harshini\n");
+(gdb) n
+harshini
+
+Breakpoint 2, main () at problem01.c:6
+6           return 0;
+(gdb) n
+7       }
+(gdb) 
