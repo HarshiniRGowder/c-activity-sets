@@ -18,3 +18,9 @@ Starting program: C:\Users\hp\c-activity-sets\set01/a.exe
 Breakpoint 1, __chkstk_ms () at ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:163
 163     ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S: No such file or directory.
 (gdb)
+breakpoints 1 and 2 also set at pc 0x402040.
+Breakpoint 3 at 0x402040: file ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S, line 8.
+(gdb) b 3
+Note: breakpoints 1, 2 and 3 also set at pc 0x402040.
+Breakpoint 4 at 0x402040: file ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S, line 3.
+(gdb) r
