@@ -24,3 +24,8 @@ Breakpoint 3 at 0x402040: file ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.
 Note: breakpoints 1, 2 and 3 also set at pc 0x402040.
 Breakpoint 4 at 0x402040: file ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S, line 3.
 (gdb) r
+Breakpoint 1 at 0x402040: file ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S, line 7.
+(gdb) b 5
+Note: breakpoint 1 also set at pc 0x402040.
+Breakpoint 2 at 0x402040: file ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S, line 5.
+(gdb) r
