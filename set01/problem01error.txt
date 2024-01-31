@@ -1,2 +1,3 @@
 gcc -g -o0 problem01.c -o problem01.exe
 gcc -g -o0 problem02 .c -o problem02.exe
+gcc -g-o0 problem03.c -o problem03 .exe
