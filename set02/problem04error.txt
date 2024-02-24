@@ -1,0 +1,132 @@
+PS C:\Users\hp\c-activity-sets\set02> git add .
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ../set01/problem01error.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\hp\c-activity-sets\set02> git push
+Everything up-to-date
+PS C:\Users\hp\c-activity-sets\set02> gcc -g -O0 problem04.c
+PS C:\Users\hp\c-activity-sets\set02> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\c-activity-sets\set02\a.exe...done.
+(gdb) b 7
+Breakpoint 1 at 0x401466: file problem04.c, line 7.
+(gdb) b 8
+Breakpoint 2 at 0x401472: file problem04.c, line 8.
+(gdb) b 9
+Breakpoint 3 at 0x401485: file problem04.c, line 9.
+(gdb) b 5
+Note: breakpoint 1 also set at pc 0x401466.
+Breakpoint 4 at 0x401466: file problem04.c, line 5.
+(gdb) r
+Starting program: C:\Users\hp\c-activity-sets\set02/a.exe 
+[New Thread 7104.0x3d3c]
+[New Thread 7104.0x2034]
+
+Breakpoint 1, input_array_size () at problem04.c:7
+7           printf("Enter the size of the array: ");
+(gdb) s
+Enter the size of the array: 
+Breakpoint 2, input_array_size () at problem04.c:8
+8           scanf("%d", &n);
+(gdb) s
+s
+
+Breakpoint 3, input_array_size () at problem04.c:9
+9           return n;
+(gdb) s
+10      }
+(gdb) s
+main () at problem04.c:52
+52          int a[n];
+(gdb) s
+__chkstk_ms () at ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:163
+163     ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S: No such file or directory.
+(gdb) s
+165     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+167     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+168     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+169     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+177     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+178     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+180     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+182     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+184     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+main () at problem04.c:53
+53          input_array(n, a);
+(gdb) s
+input_array (n=0, a=0x61fee8) at problem04.c:14
+14          printf("Enter the elements of the array: ");
+(gdb) s
+Enter the elements of the array: 15         for (int i = 0; i < n; i++) {
+(gdb) s
+18      }
+(gdb) s
+main () at problem04.c:54
+54          int sum = sum_composite_numbers(n, a);
+(gdb) s
+sum_composite_numbers (n=0, a=0x61fee8) at problem04.c:35
+35          int sum = 0;
+(gdb) s
+36          for (int i = 0; i < n; i++) {
+(gdb) s
+41          return sum;
+(gdb) s
+42      }
+(gdb) s
+main () at problem04.c:55
+55          output(sum);
+(gdb) s
+output (sum=0) at problem04.c:46
+46          printf("Sum of composite numbers: %d\n", sum);
+(gdb) s
+Sum of composite numbers: 0
+47      }
+(gdb) s
+main () at problem04.c:56
+56          return 0;
+(gdb) s
+57      }
+(gdb) s
+0x00401288 in __register_frame_info ()
+(gdb) s
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x0040128a in __register_frame_info ()
+(gdb) s
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x0040128f in __register_frame_info ()
+(gdb) s
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x00401292 in __register_frame_info ()
+(gdb) s
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+[Inferior 1 (process 7104) exited normally]
+(gdb) s
+The program is not being run.
+(gdb) quit
+PS C:\Users\hp\c-activity-sets\set02> 
