@@ -1,16 +1,4 @@
-PS C:\Users\hp\c-activity-sets> git add .
-On branch main
-Your branch is ahead of 'origin/main' by 2 commits.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working tree clean
-PS C:\Users\hp\c-activity-sets> git push .
-Everything up-to-date
-PS C:\Users\hp\c-activity-sets> cd set02
-PS C:\Users\hp\c-activity-sets\set02> gcc problem02.c -O0 -g
-d:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file a.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-PS C:\Users\hp\c-activity-sets\set02> gdb a.exe
+gdb a.exe
 GNU gdb (GDB) 7.6.1
 Copyright (C) 2013 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
