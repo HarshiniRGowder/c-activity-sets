@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-// Function to input the size of the array
 int input_array_size() {
     int n;
     printf("Enter the size of the array: ");
@@ -9,7 +8,7 @@ int input_array_size() {
     return n;
 }
 
-// Function to input the elements of the array
+
 void input_array(int n, int a[n]) {
     printf("Enter the elements of the array: ");
     for (int i = 0; i < n; i++) {
@@ -17,7 +16,6 @@ void input_array(int n, int a[n]) {
     }
 }
 
-// Function to check if a number is composite
 bool is_composite(int number) {
     if (number <= 1) {
         return false;
@@ -30,7 +28,6 @@ bool is_composite(int number) {
     return false;
 }
 
-// Function to calculate the sum of composite numbers in the array
 int sum_composite_numbers(int n, int a[n]) {
     int sum = 0;
     for (int i = 0; i < n; i++) {
@@ -40,8 +37,6 @@ int sum_composite_numbers(int n, int a[n]) {
     }
     return sum;
 }
-
-// Function to output the sum of composite numbers
 void output(int sum) {
     printf("Sum of composite numbers: %d\n", sum);
 }

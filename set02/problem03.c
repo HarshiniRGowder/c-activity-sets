@@ -18,17 +18,17 @@ int is_composite(int n)
     if (n <= 1)
     {
         return 0;
-        // 0 and 1 are not composite numbers
+       
     }
     else if (n == 2)
     {
         return 0; 
-        // 2 is not a composite number
+       
     }
     else if (n % 2 == 0)
     {
         return 1; 
-        // Even numbers greater than 2 are composite
+        
     }
     else
     {
