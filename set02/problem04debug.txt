@@ -7,3 +7,10 @@ Breakpoint 3 at 0x401485: file problem04.c, line 9.
 Note: breakpoint 1 also set at pc 0x401466.
 Breakpoint 4 at 0x401466: file problem04.c, line 5.
 (gdb) r
+Breakpoint 1 at 0x401485: file problem05.c, line 8.
+(gdb) b 8
+Note: breakpoint 1 also set at pc 0x401485.
+Breakpoint 2 at 0x401485: file problem05.c, line 8.
+(gdb) b 3
+Breakpoint 3 at 0x401466: file problem05.c, line 3.
+(gdb) r

@@ -130,3 +130,96 @@ which has no line number information.
 The program is not being run.
 (gdb) quit
 PS C:\Users\hp\c-activity-sets\set02> 
+
+
+PS C:\Users\hp\c-activity-sets\set02> git add .
+PS C:\Users\hp\c-activity-sets\set02> git commit -m "Test"
+[main f33c77e] Test
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+PS C:\Users\hp\c-activity-sets\set02> git push .
+Everything up-to-date
+PS C:\Users\hp\c-activity-sets\set02> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\c-activity-sets\set02\a.exe...done.
+(gdb) b 8
+Breakpoint 1 at 0x401485: file problem05.c, line 8.
+(gdb) b 8
+Note: breakpoint 1 also set at pc 0x401485.
+Breakpoint 2 at 0x401485: file problem05.c, line 8.
+(gdb) b 3
+Breakpoint 3 at 0x401466: file problem05.c, line 3.
+(gdb) r
+Starting program: C:\Users\hp\c-activity-sets\set02/a.exe 
+[New Thread 2884.0x3908]
+[New Thread 2884.0x3494]
+
+Breakpoint 3, input () at problem05.c:6
+6           printf("Enter two integers separated by space: ");
+(gdb) s
+Enter two integers separated by space: 7            scanf("%d %d", &n);
+(gdb) s
+s
+
+Breakpoint 1, input () at problem05.c:8
+8           return n;
+(gdb) s
+9       }
+(gdb) s
+main () at problem05.c:33
+33          b = input();
+(gdb) s
+
+Breakpoint 3, input () at problem05.c:6
+6           printf("Enter two integers separated by space: ");
+(gdb) s
+Enter two integers separated by space: 7            scanf("%d %d", &n);
+(gdb) s
+
+Breakpoint 1, input () at problem05.c:8
+8           return n;
+(gdb) s
+9       }
+(gdb) s
+main () at problem05.c:36
+36          int gcd = find_gcd(a, b);
+(gdb) s
+find_gcd (a=6422476, b=6422476) at problem05.c:13
+13          while (a != b) {
+(gdb) s
+20          return a;
+(gdb) s
+21      }
+(gdb) s
+main () at problem05.c:39
+39          output(a, b, gcd);
+(gdb) s
+output (a=6422476, b=6422476, gcd=6422476) at problem05.c:25
+25          printf("GCD of %d and %d is %d\n", a, b, gcd);
+(gdb) s
+GCD of 6422476 and 6422476 is 6422476
+26      }
+(gdb) s
+main () at problem05.c:41
+41          return 0;
+(gdb) s
+42      }
+(gdb) s
+0x00401288 in __register_frame_info ()
+(gdb) s
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x0040128a in __register_frame_info ()
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 2884] will be killed.
+
+Quit anyway? (y or n)
