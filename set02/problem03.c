@@ -17,16 +17,6 @@ int is_composite(int n)
 {
     if (n <= 1)
     {
-        return 0;
-       
-    }
-    else if (n == 2)
-    {
-        return 0; 
-       
-    }
-    else if (n % 2 == 0)
-    {
         return 1; 
         
     }
@@ -46,6 +36,16 @@ int is_composite(int n)
 void output(int n, int result)
 {
     if (result == 0)
+    {
+        return 0;
+       
+    }
+    else if (n == 2)
+    {
+        return 0; 
+       
+    }
+    else if (n % 2 == 0)
     {
         printf("\n%d is not composite.", n);
     }
