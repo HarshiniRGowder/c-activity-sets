@@ -3,3 +3,308 @@ gcc -g -o0 problem02 .c -o problem02.exe
 gcc -g-o0 problem03.c -o problem03 .exe
 gcc -g-o0 problem04.c -o problem04 .exe
 gcc -g-o0 problem05.c -o problem05 .exe
+PS C:\Users\hp\c-activity-sets> cd "c:\Users\hp\c-activity-sets\set01\" ; if ($?) { gcc problem01.c -o problem01 } ; if ($?) { .\problem01 }
+harshini
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ../set02/problem01.error.txt
+        modified:   ../set02/problem01debug.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\hp\c-activity-sets\set01> git commit -m "test"
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ../set02/problem01.error.txt
+        modified:   ../set02/problem01debug.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\hp\c-activity-sets\set01> git push
+Everything up-to-date
+PS C:\Users\hp\c-activity-sets\set01> gdb a.exe                                                                                                     
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\c-activity-sets\set01\a.exe...done.
+(gdb) b 7
+Breakpoint 1 at 0x402040: file ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S, line 7.
+(gdb) b 8
+Note: breakpoint 1 also set at pc 0x402040.
+Breakpoint 2 at 0x402040: file ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S, line 8.
+(gdb) b 9
+Note: breakpoints 1 and 2 also set at pc 0x402040.
+Breakpoint 3 at 0x402040: file ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S, line 9.
+(gdb) r
+Starting program: C:\Users\hp\c-activity-sets\set01/a.exe 
+[New Thread 10744.0x23a0]
+[New Thread 10744.0x3140]
+
+Breakpoint 1, __chkstk_ms () at ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:163
+163     ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S: No such file or directory.
+(gdb) s
+165     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+167     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+168     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+169     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+177     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+178     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+180     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+182     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+184     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+0x004014f7 in _setargv ()
+(gdb) s
+Single stepping until exit from function _setargv,
+which has no line number information.
+
+Breakpoint 1, __chkstk_ms () at ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:163
+163     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+165     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+167     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+168     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+169     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+177     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+178     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+180     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+182     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+184     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+0x004027b6 in fesetenv ()
+(gdb) s
+Single stepping until exit from function fesetenv,
+which has no line number information.
+
+Breakpoint 1, __chkstk_ms () at ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:163
+163     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+165     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+167     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+168     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+169     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+177     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+178     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+180     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+182     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+184     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+0x00403250 in __mingw_dirname ()
+(gdb) s
+Single stepping until exit from function __mingw_dirname,
+which has no line number information.
+0x004027d4 in fesetenv ()
+(gdb) ss
+Undefined command: "ss".  Try "help".
+(gdb) s
+Single stepping until exit from function fesetenv,
+which has no line number information.
+0x00403ab8 in malloc ()
+(gdb) s
+Single stepping until exit from function malloc,
+which has no line number information.
+0x755b74f0 in msvcrt!malloc () from C:\Windows\SysWOW64\msvcrt.dll
+(gdb) s
+Single stepping until exit from function msvcrt!malloc,
+which has no line number information.
+0x004021a0 in fesetenv ()
+(gdb) s
+Single stepping until exit from function fesetenv,
+which has no line number information.
+0x00403a68 in strlen ()
+(gdb) s
+Single stepping until exit from function strlen,
+which has no line number information.
+0x755f97f0 in strlen () from C:\Windows\SysWOW64\msvcrt.dll
+(gdb) s
+Single stepping until exit from function strlen,
+which has no line number information.
+0x00402ceb in fesetenv ()
+(gdb) s
+Single stepping until exit from function fesetenv,
+which has no line number information.
+
+Breakpoint 1, __chkstk_ms () at ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:163
+163     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+165     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+167     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+168     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+169     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+177     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+178     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+180     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+182     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+184     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+0x00402cf9 in fesetenv ()
+(gdb) s
+Single stepping until exit from function fesetenv,
+which has no line number information.
+0x00403a90 in realloc ()
+(gdb) s
+Single stepping until exit from function realloc,
+which has no line number information.
+0x755b75e0 in realloc () from C:\Windows\SysWOW64\msvcrt.dll
+(gdb) s
+Single stepping until exit from function realloc,
+which has no line number information.
+0x755ccc04 in strerror_s () from C:\Windows\SysWOW64\msvcrt.dll
+(gdb) s
+Single stepping until exit from function strerror_s,
+which has no line number information.
+0x755b75ec in realloc () from C:\Windows\SysWOW64\msvcrt.dll
+(gdb) s
+Single stepping until exit from function realloc,
+which has no line number information.
+0x004026f6 in fesetenv ()
+(gdb) s
+Single stepping until exit from function fesetenv,
+which has no line number information.
+0x00403a68 in strlen ()
+(gdb) s
+Single stepping until exit from function strlen,
+which has no line number information.
+0x755f97f0 in strlen () from C:\Windows\SysWOW64\msvcrt.dll
+(gdb) s
+Single stepping until exit from function strlen,
+which has no line number information.
+0x00402856 in fesetenv ()
+(gdb) s
+Single stepping until exit from function fesetenv,
+which has no line number information.
+0x00403a60 in tolower ()
+(gdb) s
+Single stepping until exit from function tolower,
+which has no line number information.
+0x755a2a40 in tolower () from C:\Windows\SysWOW64\msvcrt.dll
+(gdb) s
+Single stepping until exit from function tolower,
+which has no line number information.
+0x0040253a in fesetenv ()
+(gdb) s
+Single stepping until exit from function fesetenv,
+which has no line number information.
+
+Breakpoint 1, __chkstk_ms () at ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:163
+163     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+165     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+167     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+168     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+169     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+177     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+178     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+180     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+182     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+184     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+0x0040299c in fesetenv ()
+(gdb) s
+Single stepping until exit from function fesetenv,
+which has no line number information.
+
+Breakpoint 1, __chkstk_ms () at ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:163
+163     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+165     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+167     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+168     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+169     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+177     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+178     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+180     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+182     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+184     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) s
+0x004029e4 in fesetenv ()
+(gdb) s
+Single stepping until exit from function fesetenv,
+which has no line number information.
+0x00403a60 in tolower ()
+(gdb) s
+Single stepping until exit from function tolower,
+which has no line number information.
+0x755a2a40 in tolower () from C:\Windows\SysWOW64\msvcrt.dll
+(gdb) s
+Single stepping until exit from function tolower,
+which has no line number information.
+0x0040253a in fesetenv ()
+(gdb) s
+Single stepping until exit from function fesetenv,
+which has no line number information.
+0x004038a0 in __mingw_readdir ()
+(gdb) s
+Single stepping until exit from function __mingw_readdir,
+which has no line number information.
+0x00402958 in fesetenv ()
+(gdb) s
+Single stepping until exit from function fesetenv,
+which has no line number information.
+0x00403a60 in tolower ()
+(gdb) quit
+A debugging session is active.
+
+        Inferior 1 [process 10744] will be killed.
+
+Quit anyway? (y or n)
+
