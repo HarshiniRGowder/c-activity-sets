@@ -1,0 +1,6 @@
+Breakpoint 1 at 0x401472: file problem05.c, line 7.
+(gdb) b 2
+Breakpoint 2 at 0x401466: file problem05.c, line 2.
+(gdb) b 9
+Breakpoint 3 at 0x401488: file problem05.c, line 9.
+(gdb) r

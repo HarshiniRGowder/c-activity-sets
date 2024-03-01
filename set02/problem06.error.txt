@@ -1,0 +1,112 @@
+PS C:\Users\hp\c-activity-sets\set02> cd "c:\Users\hp\c-activity-sets\set02\" ; if ($?) { gcc problem06.c -o problem06 } ; if ($?) { .\problem06 }
+Enter a string: hello
+Original string: hello
+Reversed string: olleh
+PS C:\Users\hp\c-activity-sets\set02> git add .
+PS C:\Users\hp\c-activity-sets\set02> git commit -m "test"
+ 1 file changed, 37 insertions(+), 1 deletion(-)
+PS C:\Users\hp\c-activity-sets\set02> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 619 bytes | 619.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/HarshiniRGowder/c-activity-sets.git
+   c9d7355..865f1ba  main -> main
+PS C:\Users\hp\c-activity-sets\set02> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\c-activity-sets\set02\a.exe...done.
+(gdb) b 7
+Breakpoint 1 at 0x401472: file problem05.c, line 7.
+(gdb) b 2
+Breakpoint 2 at 0x401466: file problem05.c, line 2.
+(gdb) b 9
+Breakpoint 3 at 0x401488: file problem05.c, line 9.
+(gdb) r
+Starting program: C:\Users\hp\c-activity-sets\set02/a.exe 
+[New Thread 16340.0x3ae8]
+[New Thread 16340.0x1198]
+
+Breakpoint 2, input () at problem05.c:6
+warning: Source file is more recent than executable.
+6           printf("Enter two integers separated by space: ");
+(gdb) s
+Enter two integers separated by space: 
+Breakpoint 1, input () at problem05.c:7
+7           scanf("%d %d", &n);
+(gdb) s
+s
+8           return n;
+(gdb) s
+
+Breakpoint 3, input () at problem05.c:9
+9       }
+(gdb) s
+main () at problem05.c:33
+33          b = input();
+(gdb) s
+
+Breakpoint 2, input () at problem05.c:6
+6           printf("Enter two integers separated by space: ");
+(gdb) s
+Enter two integers separated by space: 
+Breakpoint 1, input () at problem05.c:7
+7           scanf("%d %d", &n);
+(gdb) s
+8           return n;
+(gdb) s
+
+Breakpoint 3, input () at problem05.c:9
+9       }
+(gdb) s
+main () at problem05.c:36
+36          int gcd = find_gcd(a, b);
+(gdb) s
+find_gcd (a=6422476, b=6422476) at problem05.c:13
+13          while (a != b) {
+(gdb) s
+20          return a;
+(gdb) s
+21      }
+(gdb) s
+main () at problem05.c:39
+39          output(a, b, gcd);
+(gdb) s
+output (a=6422476, b=6422476, gcd=6422476) at problem05.c:25
+25          printf("GCD of %d and %d is %d\n", a, b, gcd);
+(gdb) s
+GCD of 6422476 and 6422476 is 6422476
+26      }
+(gdb) s
+main () at problem05.c:41
+41          return 0;
+(gdb) s
+42      }
+(gdb) s
+0x00401288 in __register_frame_info ()
+(gdb) s
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x0040128a in __register_frame_info ()
+(gdb) quit
+A debugging session is active.
+        Inferior 1 [process 16340] will be killed.
+
+Quit anyway? (y or n) n
+Not confirmed.
+(gdb) quit
+A debugging session is active.
+
+        Inferior 1 [process 16340] will be killed.
+
+Quit anyway? (y or n) y
