@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main()
 {
-    printf("harshini\n");
+    printf("harshini\n")
     return 0;
 }
 
