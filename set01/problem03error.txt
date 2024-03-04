@@ -1,0 +1,91 @@
+PS C:\Users\hp\c-activity-sets\set01> cd "c:\Users\hp\c-activity-sets\set01\" ; if ($?) { gcc problem03.c -o problem03 } ; if ($?) { .\problem03 }
+6
+8
+the sum is 14
+PS C:\Users\hp\c-activity-sets\set01> git add .
+PS C:\Users\hp\c-activity-sets\set01> git commit -m "test"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\hp\c-activity-sets\set01> git push                                                                                                      
+Everything up-to-date
+PS C:\Users\hp\c-activity-sets\set01> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\hp\c-activity-sets\set01\a.exe...done.
+(gdb) b 8
+Breakpoint 1 at 0x40146e: file problem03.c, line 8.
+(gdb) b 3
+Note: breakpoint 1 also set at pc 0x40146e.
+Breakpoint 2 at 0x40146e: file problem03.c, line 3.
+(gdb) b 9
+Breakpoint 3 at 0x401477: file problem03.c, line 9.
+(gdb) r
+Starting program: C:\Users\hp\c-activity-sets\set01/a.exe 
+[New Thread 8412.0x3c44]
+[New Thread 8412.0x3390]
+
+Breakpoint 1, main () at problem03.c:8
+8           a=input();
+(gdb) s
+input () at problem03.c:17
+17      printf("enter the number\n");
+(gdb) s
+enter the number
+18      scanf("%d",&num);
+(gdb) s
+s
+19      return num;
+(gdb) s
+20      }
+(gdb) s
+
+Breakpoint 3, main () at problem03.c:9
+9           b=input();
+(gdb) s
+input () at problem03.c:17
+17      printf("enter the number\n");
+(gdb) s
+enter the number
+18      scanf("%d",&num);
+(gdb) s
+19      return num;
+(gdb) s
+20      }
+(gdb) s
+main () at problem03.c:10
+10          sum=add(a,b,sum);
+(gdb) s
+add (a=6422476, b=6422476, sum=0) at problem03.c:24
+24      sum=a+b;
+(gdb) s
+25      return sum;
+(gdb) s
+26      }
+(gdb) s
+main () at problem03.c:11
+11          output(a,b,sum);
+(gdb) s
+output (a=6422476, b=6422476, sum=12844952) at problem03.c:29
+29          printf("the sum is %d\n",sum);
+(gdb) s
+the sum is 12844952
+30      }(gdb) s
+main () at problem03.c:12
+12          return 0;
+(gdb) s
+13      }
+(gdb) s
+0x00401288 in __register_frame_info ()
+(gdb) s
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x0040128a in __register_frame_info ()

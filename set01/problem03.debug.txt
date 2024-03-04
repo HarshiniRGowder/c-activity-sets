@@ -1,0 +1,8 @@
+(gdb) b 8
+Breakpoint 1 at 0x40146e: file problem03.c, line 8.
+(gdb) b 3
+Note: breakpoint 1 also set at pc 0x40146e.
+Breakpoint 2 at 0x40146e: file problem03.c, line 3.
+(gdb) b 9
+Breakpoint 3 at 0x401477: file problem03.c, line 9.
+(gdb) r
